@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&amp;display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url(main/base.css);
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background: #ddd;
+  color: #003164;
+  font-family: 'Roboto';
+  font-weight: bold;
+}
+
+/*---------------------------------------------*/
+/*Pomodoro*/
+/*---------------------------------------------*/
+.container {
+  max-width: 1280px;
+  min-width: 1280px;
+  background: #FFEDF7;
+  overflow: hidden;
+  -ms-box-shadow: 0px 30px 40px rgba(51, 51, 51, 0.3);
+  -o-box-shadow: 0px 30px 40px rgba(51, 51, 51, 0.3);
+  box-shadow: 0px 30px 40px rgba(51, 51, 51, 0.3);
+}
+
+.container > .row {
+  height: 800px;
+}
+
+.container > .row > div {
+  padding: 0;
+}
+
+.container > .row > :first-child {
+  padding-left: 85px;
+}
+
+.container > .row > :last-child {
+  background: #003164;
+}
+
+.container > .row > :nth-child(2) {
+  position: relative;
+}
+
+.container > .row > :nth-child(2)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: #003164;
+}
+
+.countDownClock {
+  width: 490px;
+  height: 490px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 50%;
+  background: #FF4384;
+}
+
+.countDownClock::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  border: 4px solid #FF4384;
+  width: 540px;
+  height: 540px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+.countDownClock .att-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9;
+}
+
+.countDownClock .att-btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  font-size: 96px;
+  cursor: pointer;
+}
+
+.countDownClock .att-btn.att-play {
+  background: #FF4384;
+  color: #FFFFFF;
+  display: none;
+}
+
+.countDownClock .att-btn.att-play._active {
+  display: block;
+}
+
+.countDownClock .att-btn.att-play._active ~ .att-stop i {
+  color: #FFFFFF;
+}
+
+.countDownClock .att-btn.att-pause {
+  background: #FFFFFF;
+  color: #FF4384;
+  display: none;
+}
+
+.countDownClock .att-btn.att-pause._active {
+  display: block;
+}
+
+.countDownClock .att-btn.att-pause._active ~ .att-stop i {
+  color: #FF4384;
+}
+
+.countDownClock .att-btn.att-pause::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  width: 480px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  background: #FFFFFF;
+  z-index: -1;
+}
+
+.countDownClock .att-btn.att-stop {
+  margin: 36px 0 0 60px;
+}
+
+.countDownClock .att-btn.att-stop i {
+  font-size: 24px;
+}
+
+.sideBar {
+  color: #FFFFFF;
+  position: relative;
+  padding: 0;
+}
+
+.sideBar .nav-list {
+  display: inline-block;
+}
+
+.sideBar .nav-list i {
+  display: block;
+  font-size: 36px;
+  margin-top: 48px;
+  transition: all 0.2s linear;
+}
+
+.sideBar .nav-list i:hover {
+  color: #FF4384;
+  cursor: pointer;
+}
+
+.sideBar .nav-text {
+  display: inline-block;
+  font-size: 24px;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+}
+
+.todoInput {
+  width: 100%;
+  background: #FFFFFF;
+  margin-top: 48px;
+}
+
+.todoInput:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.todoInput .add-todo-input {
+  width: 88%;
+  border: 0;
+  outline: 0;
+  float: left;
+  font-size: 16px;
+  color: #FF4384;
+  padding: 16px;
+  transition: all 0.1s linear;
+}
+
+.todoInput .add-todo-input:-ms-input-placeholder {
+  color: #FF4384;
+  font-style: italic;
+}
+
+.todoInput .add-todo-input::placeholder {
+  color: #FF4384;
+  font-style: italic;
+}
+
+.todoInput .add-todo-input:focus {
+  outline: 2px solid #FF4384;
+  -ms-box-shadow: 0 0 4px rgba(255, 67, 132, 0.4);
+  -o-box-shadow: 0 0 4px rgba(255, 67, 132, 0.4);
+  box-shadow: 0 0 4px rgba(255, 67, 132, 0.4);
+}
+
+.todoInput .add-todo-btn {
+  width: 12%;
+  height: 56px;
+  border: 0;
+  outline: 0;
+  float: left;
+  background: none;
+  font-size: 24px;
+  color: #FF4384;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.todoInput .add-todo-btn:hover {
+  background: #FF4384;
+  color: #FFFFFF;
+}
+
+.countDownEvent {
+  margin-top: 145px;
+}
+
+.countDownEvent .event-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.countDownEvent .event-info {
+  margin-left: 16px;
+}
+
+.countDownEvent .event-checked {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #003164;
+  position: relative;
+  cursor: pointer;
+}
+
+.countDownEvent .event-checked:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #003164;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.countDownEvent .event-checked:hover:before {
+  opacity: 1;
+}
+
+.countDownEvent .event-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.countDownEvent .event-clock-dot {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #003164;
+}
+
+.countDownEvent .event-clock-dot + .event-clock-dot {
+  margin-left: 8px;
+}
+
+.countDownEvent .count-down-time {
+  font-size: 176px;
+  color: #FF4384;
+  line-height: 1;
+}
+
+.eventList {
+  margin-top: 110px;
+}
+
+.eventList .todo-event {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  border-bottom: 1px solid rgba(0, 49, 100, 0.2);
+  line-height: 2;
+}
+
+.eventList .todo-event i {
+  cursor: pointer;
+}
+
+.eventList .todo-event span {
+  margin-left: 8px;
+  text-transform: uppercase;
+}
+
+.eventList .todo-event .todo {
+  margin-left: auto;
+}

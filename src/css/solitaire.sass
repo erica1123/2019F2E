@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap')
+@import 'mixins'
+@import 'main/base.css'
+*
+  // outline: 1px solid #000
+
+// Colors
+$mainColor: #FFB53E
+$mainbgColor: #E2E2E2
+$b: #222222
+$w: #FCFCFC
+$g: #BABABA
+
+// Fonts
+=font($f:24)
+  font-size: ($f) * 1px
+
+//Basic
+body
+  +flexCenter
+  background: $mainbgColor
+  font-family: 'Lato', sans-serif
+  font-weight: bold
+  [class^='col']
+    display: flex
+    justify-content: space-around
+    align-items: center
+  [class^='card']
+    width: 95px
+    height: 145px
+    border-radius: 5px
+  [class^='btn']
+    +size(120px)
+    font-size: 12px
+    color: $w
+    background: $b
+    border-radius: 50px
+    line-height: 30px
+    text-transform: uppercase
+    &:hover
+      background: $mainColor
+      color: $w
+  [class^='ico-']
+    +size(60px, 60px)
+    margin: 0 auto
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 60px 60px
+  .ico-joy
+    background-image: url('../images/Solitaire/king_joy.png')
+  .ico-happy
+    background-image: url('../images/Solitaire/king_happy.png')
+  .ico-sad
+    background-image: url('../images/Solitaire/king_sad.png')
+  .ico-angry
+    background-image: url('../images/Solitaire/king_angry.png')
+
+/*---------------------------------------------*/
+/*Solitaire*/
+/*---------------------------------------------*/
+.container
+  max-width: 1280px
+  min-width: 1280px
+  overflow: hidden
+  padding: 0 115px
+  .card-droped, .card-complated
+    border: 2px solid rgba($w,0.6)
+    .card
+      margin: -2px 0 0 -2px
+  .card-complated
+    background-color: rgba($w,0.6)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 35px 35px
+    &.s
+      background-image: url('../images/Solitaire/S.png')
+    &.h
+      background-image: url('../images/Solitaire/H.png')
+    &.d
+      background-image: url('../images/Solitaire/D.png')
+    &.c
+      background-image: url('../images/Solitaire/C.png')
+      
+#freecell
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-flow: column
+  padding: 0
+  span
+    font-size: 14px
+    text-transform: uppercase
+    letter-spacing: 1px
+    +transform(scaleY(0.9))
+
+#card-decks
+  margin-top: 30px
+  min-height: 485px
+  .col
+    flex-flow: column
+    justify-content: flex-start
+    padding: 0
+  .card 
+    cursor: pointer
+    +transition(all, .1s)
+    & + .card
+      margin-top: -115px
+    &:active
+      border: 2px solid rgba($mainColor, 1)
+      +box-shadow(0,0,5px,rgba($mainColor, .8))
+
+#func-decks
+  border-top: 1px solid #ccc
+  padding: 20px 0
+  text-transform: uppercase
+  font-size: 12px
+  letter-spacing: 1px
+  .fun-record
+    justify-content: flex-start
+    padding: 0
+  .fun-btns
+    justify-content: flex-end
+    padding: 0
+    .btn + .btn
+      margin-left: 15px
+  #ico-info
+    +size(40px, 40px)
+    border: 2px solid $b
+    border-radius: 100%
+    margin-right: 10px
+    background: url('../images/Solitaire/info.png') no-repeat 50% 50%
+    background-size: 100% auto
+    cursor: pointer
+  #func-time
+    margin-right: 20px
+
+/*---------------------------------------------*/
+/*Popup*/
+/*---------------------------------------------*/
+#overlay
+  +size(100%, 100%)
+  background: rgba($b, 0.7)
+  position: fixed
+  z-index: 9
+[id^='popup-']
+  display: none
+  max-width: 600px
+  border-radius: 10px
+  background: $w
+  text-align: center
+  letter-spacing: 1px
+  padding: 50px 25px
+  z-index: 99
+  +centeralign
+  .show
+    display: block
+  .title
+    text-transform: uppercase
+    font-size: 20px
+    margin: 15px auto
+  .contBox
+    width: 480px
+    min-height: 60px
+    max-height: 300px
+    overflow-y: auto
+    font-weight: normal
+    font-size: 13px
+    letter-spacing: 1px
+    margin: 0 auto
+    padding: 0 15px
+  .btn
+    line-height: 20px
+    & + .btn
+      margin-left: 15px
+  .close
+    width: 20px
+    height: 20px
+    opacity: 1
+    position: absolute
+    top: 30px
+    right: 30px
+    cursor: pointer
+    +rotate(45)
+    &:before
+      content: ''
+      display: block
+      width: 20px
+      height: 2px
+      background: $b
+      +centeralign
+    &:after
+      content: ''
+      display: block
+      width: 2px
+      height: 20px
+      background: $b
+      +centeralign
+
+  
