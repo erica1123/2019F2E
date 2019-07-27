@@ -12,7 +12,7 @@ body {
   font-weight: bold;
 }
 
-body [class^='col'] {
+[class^='col'] {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
@@ -21,13 +21,13 @@ body [class^='col'] {
       align-items: center;
 }
 
-body [class^='card'] {
+[class^='card'] {
   width: 95px;
   height: 145px;
   border-radius: 5px;
 }
 
-body [class^='btn'] {
+[class^='btn'] {
   width: 120px;
   height: auto;
   font-size: 12px;
@@ -38,12 +38,12 @@ body [class^='btn'] {
   text-transform: uppercase;
 }
 
-body [class^='btn']:hover {
+[class^='btn']:hover {
   background: #FFB53E;
   color: #FCFCFC;
 }
 
-body [class^='ico-'] {
+[class^='ico-'] {
   width: 60px;
   height: 60px;
   margin: 0 auto;
@@ -52,19 +52,19 @@ body [class^='ico-'] {
   background-size: 60px 60px;
 }
 
-body .ico-joy {
+.ico-joy {
   background-image: url("../images/Solitaire/king_joy.png");
 }
 
-body .ico-happy {
+.ico-happy {
   background-image: url("../images/Solitaire/king_happy.png");
 }
 
-body .ico-sad {
+.ico-sad {
   background-image: url("../images/Solitaire/king_sad.png");
 }
 
-body .ico-angry {
+.ico-angry {
   background-image: url("../images/Solitaire/king_angry.png");
 }
 

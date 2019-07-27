@@ -11,49 +11,45 @@ $b: #222222
 $w: #FCFCFC
 $g: #BABABA
 
-// Fonts
-=font($f:24)
-  font-size: ($f) * 1px
-
 //Basic
 body
   +flexCenter
   background: $mainbgColor
   font-family: 'Lato', sans-serif
   font-weight: bold
-  [class^='col']
-    display: flex
-    justify-content: space-around
-    align-items: center
-  [class^='card']
-    width: 95px
-    height: 145px
-    border-radius: 5px
-  [class^='btn']
-    +size(120px)
-    font-size: 12px
+[class^='col']
+  display: flex
+  justify-content: space-around
+  align-items: center
+[class^='card']
+  width: 95px
+  height: 145px
+  border-radius: 5px
+[class^='btn']
+  +size(120px)
+  font-size: 12px
+  color: $w
+  background: $b
+  border-radius: 50px
+  line-height: 30px
+  text-transform: uppercase
+  &:hover
+    background: $mainColor
     color: $w
-    background: $b
-    border-radius: 50px
-    line-height: 30px
-    text-transform: uppercase
-    &:hover
-      background: $mainColor
-      color: $w
-  [class^='ico-']
-    +size(60px, 60px)
-    margin: 0 auto
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: 60px 60px
-  .ico-joy
-    background-image: url('../images/Solitaire/king_joy.png')
-  .ico-happy
-    background-image: url('../images/Solitaire/king_happy.png')
-  .ico-sad
-    background-image: url('../images/Solitaire/king_sad.png')
-  .ico-angry
-    background-image: url('../images/Solitaire/king_angry.png')
+[class^='ico-']
+  +size(60px, 60px)
+  margin: 0 auto
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 60px 60px
+.ico-joy
+  background-image: url('../images/Solitaire/king_joy.png')
+.ico-happy
+  background-image: url('../images/Solitaire/king_happy.png')
+.ico-sad
+  background-image: url('../images/Solitaire/king_sad.png')
+.ico-angry
+  background-image: url('../images/Solitaire/king_angry.png')
 
 /*---------------------------------------------*/
 /*Solitaire*/
