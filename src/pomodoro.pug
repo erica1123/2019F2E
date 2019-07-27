@@ -1,8 +1,11 @@
 extends ./pages/_layout.pug
 block append title
-	title week1 - Pomodoro 蕃茄鐘
+	title week1 - Pomodoro
 block append js
 	script(src="webroot/scripts/pomodoro.js")
+block append css
+	link(type="text/css", rel="stylesheet", href="webroot/css/pomodoro.css")
+
 
 block append content
 	.container

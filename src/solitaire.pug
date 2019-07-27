@@ -1,0 +1,111 @@
+extends ./pages/_layout.pug
+block append title
+  title week2 - Solitaire
+block append js
+  script(src="webroot/scripts/solitaire.js")
+block append css
+  link(type="text/css", rel="stylesheet", href="webroot/css/solitaire.css")
+
+block append content
+  .container
+    .row
+      .col#card-droped-decks
+        .card-droped(ondrop="drop(event)", ondragover="allowDrop(event)")
+        .card-droped
+        .card-droped
+        .card-droped
+      .col-1#freecell
+        .ico-happy
+        span freecell
+      .col#card-complated-decks
+        .card-complated.s
+          img.card(src="webroot/images/Solitaire/card/S1.png")
+        .card-complated.h
+          img.card(src="webroot/images/Solitaire/card/H1.png")
+        .card-complated.c
+          img.card(src="webroot/images/Solitaire/card/C1.png")
+        .card-complated.d
+          img.card(src="webroot/images/Solitaire/card/D1.png")
+    .row#card-decks
+      .col(ondrop="drop(event)" ondragover="allowDrop(event)")
+        img.card(src="webroot/images/Solitaire/card/S2.png")
+        img.card(src="webroot/images/Solitaire/card/S3.png")
+        img.card(src="webroot/images/Solitaire/card/S4.png")
+        img.card(src="webroot/images/Solitaire/card/S5.png")
+        img.card(src="webroot/images/Solitaire/card/S6.png")
+        img.card(src="webroot/images/Solitaire/card/S7.png")
+      .col
+        img.card(src="webroot/images/Solitaire/card/S8.png")
+        img.card(src="webroot/images/Solitaire/card/S9.png")
+        img.card(src="webroot/images/Solitaire/card/S10.png")
+        img.card(src="webroot/images/Solitaire/card/S11.png")
+        img.card(src="webroot/images/Solitaire/card/S12.png")
+        img.card(src="webroot/images/Solitaire/card/S13.png")
+      .col
+        img.card(src="webroot/images/Solitaire/card/H2.png")
+        img.card(src="webroot/images/Solitaire/card/H3.png")
+        img.card(src="webroot/images/Solitaire/card/H4.png")
+        img.card(src="webroot/images/Solitaire/card/H5.png")
+        img.card(src="webroot/images/Solitaire/card/H6.png")
+        img.card(src="webroot/images/Solitaire/card/H7.png")
+      .col
+        img.card(src="webroot/images/Solitaire/card/H8.png")
+        img.card(src="webroot/images/Solitaire/card/H9.png")
+        img.card(src="webroot/images/Solitaire/card/H10.png")
+        img.card(src="webroot/images/Solitaire/card/H11.png")
+        img.card(src="webroot/images/Solitaire/card/H12.png")
+        img.card(src="webroot/images/Solitaire/card/H13.png")
+      .col
+        img.card(src="webroot/images/Solitaire/card/C2.png")
+        img.card(src="webroot/images/Solitaire/card/C3.png")
+        img.card(src="webroot/images/Solitaire/card/C4.png")
+        img.card(src="webroot/images/Solitaire/card/C5.png")
+        img.card(src="webroot/images/Solitaire/card/C6.png")
+        img.card(src="webroot/images/Solitaire/card/C7.png")
+      .col
+        img.card(src="webroot/images/Solitaire/card/C8.png")
+        img.card(src="webroot/images/Solitaire/card/C9.png")
+        img.card(src="webroot/images/Solitaire/card/C10.png")
+        img.card(src="webroot/images/Solitaire/card/C11.png")
+        img.card(src="webroot/images/Solitaire/card/C12.png")
+        img.card(src="webroot/images/Solitaire/card/C13.png")
+      .col
+        img.card(src="webroot/images/Solitaire/card/D2.png")
+        img.card(src="webroot/images/Solitaire/card/D3.png")
+        img.card(src="webroot/images/Solitaire/card/D4.png")
+        img.card(src="webroot/images/Solitaire/card/D5.png")
+        img.card(src="webroot/images/Solitaire/card/D6.png")
+        img.card(src="webroot/images/Solitaire/card/D7.png")
+      .col
+        img.card(src="webroot/images/Solitaire/card/D8.png")
+        img.card(src="webroot/images/Solitaire/card/D9.png")
+        img.card(src="webroot/images/Solitaire/card/D10.png")
+        img.card(src="webroot/images/Solitaire/card/D11.png")
+        img.card(src="webroot/images/Solitaire/card/D12.png")
+        img.card(src="webroot/images/Solitaire/card/D13.png")
+    .row#func-decks
+      .col-4.fun-record
+        #ico-info
+        #func-time time: 00:00
+        #func-score score: 0
+      .col.fun-btns
+        .btn#btn-newGame new game
+        .btn#btn-restart restart
+        .btn#btn-hint hint
+        .btn#btn-undo undo
+  //- new game
+  #popup-newGame
+    .ico-angry
+    .title start a new game
+    .contBox
+      span Are you sure you want to give up?
+    .btn NEW GAME
+  //- no more move
+  #popup-noMove
+    .ico-sad
+    .title no more move
+    .contBox
+      span There are no moves available.
+    .btn RESTART
+    .btn NEW GAME
+    .btn UNDO
