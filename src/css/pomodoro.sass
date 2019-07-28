@@ -19,11 +19,11 @@ $w: #FFFFFF
 
 //Basic
 body
-	+flexCenter
 	background: #ddd
 	color: $blue
 	font-family: 'Roboto'
 	font-weight: bold 
+	position: relative
 
 /*---------------------------------------------*/
 /*Pomodoro*/
@@ -33,6 +33,7 @@ body
 	min-width: 1280px
 	background: $mainbgColor
 	overflow: hidden
+	+centeralign
 	+box-shadow(0px,30px,40px,rgba(#333, .3))
 	& > .row
 		height: 800px
