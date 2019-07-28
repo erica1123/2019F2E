@@ -8,49 +8,50 @@ block append css
 
 block append content
   .container
-    .row
-      .col-5
-        .todoInput
-          input.add-todo-input(type="text", placeholder="add a new mission…")
-          input.add-todo-btn(type="button", value="+")
-        .countDownEvent
-          .event-header
-            .event-checked
-            .event-info
-              .event-title the First thing to do today
-              .event-clock
-                .event-clock-dot
-                .event-clock-dot
-                .event-clock-dot
-                .event-clock-dot
-                .event-clock-dot
-                .event-clock-dot
-                .event-clock-dot
-          .count-down-time 00:25
-        .eventList
-          .todo-event 
-            i.material-icons panorama_fish_eye
-            span THE SECOND THING TO DO TODAY!
-            i.material-icons.todo  play_circle_outline
-          .todo-event 
-            i.material-icons panorama_fish_eye
-            span THE THIRD THING TO DO TODAY!
-            i.material-icons.todo play_circle_outline
-          .todo-event 
-            i.material-icons panorama_fish_eye
-            span THE FORTH THING TO DO TODAY!
-            i.material-icons.todo play_circle_outline
-      .col-6
-        .countDownClock
-          .att-btn.att-play._active
-            i.material-icons play_circle_filled
-          .att-btn.att-pause
-            i.material-icons pause_circle_filled
-          .att-btn.att-stop
-            i.material-icons stop
-      .col-1.sideBar
-        .nav-list
-          i.material-icons list
-          i.material-icons assessment
-          i.material-icons library_music
-        span.nav-text POMODORO
+    .wrapper
+      .row
+        .col-5#clock-info
+          .todoInput
+            input.add-todo-input(type="text", placeholder="add a new mission…")
+            input.add-todo-btn(type="button", value="+")
+          .countDownEvent
+            .event-header
+              .event-checked
+              .event-info
+                .event-title the First thing to do today
+                .event-clock
+                  .event-clock-dot
+                  .event-clock-dot
+                  .event-clock-dot
+                  .event-clock-dot
+                  .event-clock-dot
+                  .event-clock-dot
+                  .event-clock-dot
+            .count-down-time 00:25
+          .eventList
+            .todo-event 
+              i.material-icons panorama_fish_eye
+              span THE SECOND THING TO DO TODAY!
+              i.material-icons.todo  play_circle_outline
+            .todo-event 
+              i.material-icons panorama_fish_eye
+              span THE THIRD THING TO DO TODAY!
+              i.material-icons.todo play_circle_outline
+            .todo-event 
+              i.material-icons panorama_fish_eye
+              span THE FORTH THING TO DO TODAY!
+              i.material-icons.todo play_circle_outline
+        .col-6#clock
+          .countDownClock
+            .att-btn.att-play._active
+              i.material-icons play_circle_filled
+            .att-btn.att-pause
+              i.material-icons pause_circle_filled
+            .att-btn.att-stop
+              i.material-icons stop
+        .col-1.sideBar
+          .nav-list
+            i.material-icons list
+            i.material-icons assessment
+            i.material-icons library_music
+          span.nav-text POMODORO

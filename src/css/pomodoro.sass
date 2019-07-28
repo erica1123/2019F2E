@@ -33,27 +33,28 @@ body
 	min-width: 1280px
 	background: $mainbgColor
 	overflow: hidden
-	+centeralign
 	+box-shadow(0px,30px,40px,rgba(#333, .3))
-	& > .row
-		height: 800px
-		& > div
+	.wrapper
+		width: 100%
+	.row
+		// height: 800px
+		div
 			padding: 0
-		& > :first-child
-			padding-left: 85px
-		& > :last-child
+	#clock-info
+		padding: 48px 0 48px 85px
+	.sideBar
+		background: $blue
+	#clock
+		position: relative
+		&::after
+			content: ""
+			display: block
+			position: absolute
+			width: 50%
+			height: 100%
+			top: 0
+			right: 0
 			background: $blue
-		& > :nth-child(2)
-			position: relative
-			&::after
-				content: ""
-				display: block
-				position: absolute
-				width: 50%
-				height: 100%
-				top: 0
-				right: 0
-				background: $blue
 
 .countDownClock
 	+size(490px, 490px)
@@ -130,7 +131,6 @@ body
 .todoInput
 	width: 100%
 	background: $w
-	margin-top: 48px
 	+clearfix
 	.add-todo-input
 		width: 88%

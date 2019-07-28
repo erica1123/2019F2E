@@ -16,45 +16,47 @@
 <body>
     <!--container-->
     <div class="container">
-        <div class="row">
-            <div class="col-5">
-                <div class="todoInput">
-                    <input class="add-todo-input" type="text" placeholder="add a new mission…">
-                    <input class="add-todo-btn" type="button" value="+">
-                </div>
-                <div class="countDownEvent">
-                    <div class="event-header">
-                        <div class="event-checked"></div>
-                        <div class="event-info">
-                            <div class="event-title">the First thing to do today</div>
-                            <div class="event-clock">
-                                <div class="event-clock-dot"></div>
-                                <div class="event-clock-dot"></div>
-                                <div class="event-clock-dot"></div>
-                                <div class="event-clock-dot"></div>
-                                <div class="event-clock-dot"></div>
-                                <div class="event-clock-dot"></div>
-                                <div class="event-clock-dot"></div>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-5" id="clock-info">
+                    <div class="todoInput">
+                        <input class="add-todo-input" type="text" placeholder="add a new mission…">
+                        <input class="add-todo-btn" type="button" value="+">
+                    </div>
+                    <div class="countDownEvent">
+                        <div class="event-header">
+                            <div class="event-checked"></div>
+                            <div class="event-info">
+                                <div class="event-title">the First thing to do today</div>
+                                <div class="event-clock">
+                                    <div class="event-clock-dot"></div>
+                                    <div class="event-clock-dot"></div>
+                                    <div class="event-clock-dot"></div>
+                                    <div class="event-clock-dot"></div>
+                                    <div class="event-clock-dot"></div>
+                                    <div class="event-clock-dot"></div>
+                                    <div class="event-clock-dot"></div>
+                                </div>
                             </div>
                         </div>
+                        <div class="count-down-time">00:25</div>
                     </div>
-                    <div class="count-down-time">00:25</div>
+                    <div class="eventList">
+                        <div class="todo-event"> <i class="material-icons">panorama_fish_eye</i><span>THE SECOND THING TO DO TODAY!</span><i class="material-icons todo"> play_circle_outline</i></div>
+                        <div class="todo-event"> <i class="material-icons">panorama_fish_eye</i><span>THE THIRD THING TO DO TODAY!</span><i class="material-icons todo">play_circle_outline</i></div>
+                        <div class="todo-event"> <i class="material-icons">panorama_fish_eye</i><span>THE FORTH THING TO DO TODAY!</span><i class="material-icons todo">play_circle_outline</i></div>
+                    </div>
                 </div>
-                <div class="eventList">
-                    <div class="todo-event"> <i class="material-icons">panorama_fish_eye</i><span>THE SECOND THING TO DO TODAY!</span><i class="material-icons todo"> play_circle_outline</i></div>
-                    <div class="todo-event"> <i class="material-icons">panorama_fish_eye</i><span>THE THIRD THING TO DO TODAY!</span><i class="material-icons todo">play_circle_outline</i></div>
-                    <div class="todo-event"> <i class="material-icons">panorama_fish_eye</i><span>THE FORTH THING TO DO TODAY!</span><i class="material-icons todo">play_circle_outline</i></div>
+                <div class="col-6" id="clock">
+                    <div class="countDownClock">
+                        <div class="att-btn att-play _active"><i class="material-icons">play_circle_filled</i></div>
+                        <div class="att-btn att-pause"><i class="material-icons">pause_circle_filled</i></div>
+                        <div class="att-btn att-stop"><i class="material-icons">stop</i></div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="countDownClock">
-                    <div class="att-btn att-play _active"><i class="material-icons">play_circle_filled</i></div>
-                    <div class="att-btn att-pause"><i class="material-icons">pause_circle_filled</i></div>
-                    <div class="att-btn att-stop"><i class="material-icons">stop</i></div>
+                <div class="col-1 sideBar">
+                    <div class="nav-list"><i class="material-icons">list</i><i class="material-icons">assessment</i><i class="material-icons">library_music</i></div><span class="nav-text">POMODORO</span>
                 </div>
-            </div>
-            <div class="col-1 sideBar">
-                <div class="nav-list"><i class="material-icons">list</i><i class="material-icons">assessment</i><i class="material-icons">library_music</i></div><span class="nav-text">POMODORO</span>
             </div>
         </div>
     </div>

@@ -58,9 +58,13 @@ body
 .container
   max-width: 1280px
   min-width: 1280px
-  overflow: hidden
-  padding: 0 115px
-  +centeralign
+  // overflow: hidden
+  padding: 50px 115px
+  display: flex
+  justify-content: center
+  align-items: center
+  .wrapper
+    width: 100%
   .card-droped, .card-complated
     border: 2px solid rgba($w,0.6)
     .card

@@ -17,37 +17,32 @@ body {
   min-width: 1280px;
   background: #FFEDF7;
   overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
   -ms-box-shadow: 0px 30px 40px rgba(51, 51, 51, 0.3);
   -o-box-shadow: 0px 30px 40px rgba(51, 51, 51, 0.3);
   box-shadow: 0px 30px 40px rgba(51, 51, 51, 0.3);
 }
 
-.container > .row {
-  height: 800px;
+.container .wrapper {
+  width: 100%;
 }
 
-.container > .row > div {
+.container .row div {
   padding: 0;
 }
 
-.container > .row > :first-child {
-  padding-left: 85px;
+.container #clock-info {
+  padding: 48px 0 48px 85px;
 }
 
-.container > .row > :last-child {
+.container .sideBar {
   background: #003164;
 }
 
-.container > .row > :nth-child(2) {
+.container #clock {
   position: relative;
 }
 
-.container > .row > :nth-child(2)::after {
+.container #clock::after {
   content: "";
   display: block;
   position: absolute;
@@ -191,7 +186,6 @@ body {
 .todoInput {
   width: 100%;
   background: #FFFFFF;
-  margin-top: 48px;
 }
 
 .todoInput:after {
