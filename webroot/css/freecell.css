@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+@import url(main/base.css);
+body {
+  background: #E2E2E2;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  position: relative;
+}
+
+[class^='col'] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+[class^='card'] {
+  width: 95px;
+  height: 145px;
+  border-radius: 5px;
+}
+
+[class^='btn'] {
+  width: 120px;
+  height: auto;
+  font-size: 12px;
+  color: #FCFCFC;
+  background: #222222;
+  border-radius: 50px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+[class^='btn']:hover {
+  background: #FFB53E;
+  color: #FCFCFC;
+}
+
+[class^='ico-'] {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60px 60px;
+}
+
+.ico-joy {
+  background-image: url("../images/Freecell/king_joy.png");
+}
+
+.ico-happy {
+  background-image: url("../images/Freecell/king_happy.png");
+}
+
+.ico-sad {
+  background-image: url("../images/Freecell/king_sad.png");
+}
+
+.ico-angry {
+  background-image: url("../images/Freecell/king_angry.png");
+}
+
+/*---------------------------------------------*/
+/*Freecell*/
+/*---------------------------------------------*/
+.container {
+  max-width: 1280px;
+  min-width: 1280px;
+  padding: 50px 115px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.container .wrapper {
+  width: 100%;
+}
+
+.container .card-droped, .container .card-complated {
+  border: 2px solid rgba(252, 252, 252, 0.6);
+}
+
+.container .card-droped .card, .container .card-complated .card {
+  margin: -2px 0 0 -2px;
+}
+
+.container .card-complated {
+  background-color: rgba(252, 252, 252, 0.6);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 35px 35px;
+}
+
+.container .card-complated.s {
+  background-image: url("../images/Freecell/S.png");
+}
+
+.container .card-complated.h {
+  background-image: url("../images/Freecell/H.png");
+}
+
+.container .card-complated.d {
+  background-image: url("../images/Freecell/D.png");
+}
+
+.container .card-complated.c {
+  background-image: url("../images/Freecell/C.png");
+}
+
+#freecell {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  padding: 0;
+}
+
+#freecell span {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -khtml-transform: scaleY(0.9);
+  -ms-transform: scaleY(0.9);
+  transform: scaleY(0.9);
+}
+
+#card-decks {
+  margin-top: 30px;
+  min-height: 485px;
+}
+
+#card-decks .col {
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  padding: 0;
+}
+
+#card-decks .card {
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+#card-decks .card + .card {
+  margin-top: -115px;
+}
+
+#card-decks .card:active {
+  border: 2px solid #ffb53e;
+  -ms-box-shadow: 0 0 5px rgba(255, 181, 62, 0.8);
+  -o-box-shadow: 0 0 5px rgba(255, 181, 62, 0.8);
+  box-shadow: 0 0 5px rgba(255, 181, 62, 0.8);
+}
+
+#func-decks {
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+#func-decks .fun-record {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  padding: 0;
+}
+
+#func-decks .fun-btns {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  padding: 0;
+}
+
+#func-decks .fun-btns .btn + .btn {
+  margin-left: 15px;
+}
+
+#func-decks #ico-info {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #222222;
+  border-radius: 100%;
+  margin-right: 10px;
+  background: url("../images/Freecell/info.png") no-repeat 50% 50%;
+  background-size: 100% auto;
+  cursor: pointer;
+}
+
+#func-decks #func-time {
+  margin-right: 20px;
+}
+
+/*---------------------------------------------*/
+/*Popup*/
+/*---------------------------------------------*/
+#overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.7);
+  position: fixed;
+  z-index: 9;
+}
+
+[id^='popup-'] {
+  display: none;
+  max-width: 600px;
+  border-radius: 10px;
+  background: #FCFCFC;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 50px 25px;
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+[id^='popup-'] .show {
+  display: block;
+}
+
+[id^='popup-'] .title {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 15px auto;
+}
+
+[id^='popup-'] .contBox {
+  width: 480px;
+  min-height: 60px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-weight: normal;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+[id^='popup-'] .btn {
+  line-height: 20px;
+}
+
+[id^='popup-'] .btn + .btn {
+  margin-left: 15px;
+}
+
+[id^='popup-'] .close {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  -khtml-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+[id^='popup-'] .close:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #222222;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+[id^='popup-'] .close:after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 20px;
+  background: #222222;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
